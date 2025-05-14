@@ -1,0 +1,96 @@
+QWidget {
+    background-color: #ffffff;
+    color: #000000;
+    font-size: 18px;
+}
+
+QFrame#left_widget {
+    background-color: #ffffff;
+}
+
+QSplitter {
+    background-color: #ffffff;
+}
+
+QSplitter::handle {
+    background-color: #808080;
+    width: 5px;
+    border: 1px solid #808080;
+    margin: 2px;
+}
+
+QSplitter::handle:horizontal {
+    background-color: #808080;
+    width: 5px;
+    border: 1px solid #808080;
+    margin: 2px;
+}
+
+QFrame {
+    background-color: #ffffff;
+}
+
+QMainWindow {
+    background-color: #ffffff;
+    font-size: 18px;
+}
+
+QLabel {
+    color: #000000;
+    font-size: 18px;
+}
+
+QLineEdit {
+    background-color: #f0f0f0;
+    color: #000000;
+    border: 1px solid #cccccc;
+    font-size: 18px;
+}
+
+QLineEdit:disabled {
+    background-color: #e0e0e0;
+    color: #888888;
+}
+
+QPushButton {
+    background-color: #e0e0e0;
+    color: #000000;
+    border: 1px solid #cccccc;
+    padding: 8px;
+    font-size: 18px;
+}
+
+QPushButton:hover {
+    background-color: #d0d0d0;
+}
+
+QMenu {
+    background-color: #e0e0e0;
+    border: 1px solid #cccccc;
+    font-size: 18px;
+}
+
+QMenu::item {
+    padding: 8px 20px;
+}
+
+QMenu::item:selected {
+    background-color: #d0d0d0;
+}
+
+QMessageBox {
+    background-color: #ffffff;
+    font-size: 18px;
+}
+
+QMessageBox QLabel {
+    color: #000000;
+    font-size: 18px;
+}
+
+QLabel#error_label {
+    background-color: #f0f0f0;
+    color: #ff0000;
+    border: 1px solid #cccccc;
+    padding: 10px;
+}

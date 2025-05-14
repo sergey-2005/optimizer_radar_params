@@ -1,0 +1,437 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1115</width>
+    <height>612</height>
+   </rect>
+  </property>
+  <property name="font">
+   <font>
+    <pointsize>12</pointsize>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>FMWC Radar Signal Optimizer</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="main_layout">
+    <item>
+     <widget class="QSplitter" name="splitter">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <widget class="QWidget" name="left_widget">
+       <layout class="QVBoxLayout" name="verticalLayout">
+        <property name="leftMargin">
+         <number>10</number>
+        </property>
+        <property name="rightMargin">
+         <number>10</number>
+        </property>
+        <item>
+         <widget class="QLabel" name="label">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>25</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>25</height>
+           </size>
+          </property>
+          <property name="baseSize">
+           <size>
+            <width>0</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>  Входные параметры:</string>
+          </property>
+          <property name="textFormat">
+           <enum>Qt::AutoText</enum>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="layout_input_dres">
+          <item>
+           <widget class="QLabel" name="label_input_dres">
+            <property name="text">
+             <string>Разр. по дальности (dres, м):</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="input_dres"/>
+          </item>
+          <item>
+           <widget class="QPushButton" name="clear_dres">
+            <property name="text">
+             <string>×</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="layout_input_vres">
+          <item>
+           <widget class="QLabel" name="label_input_vres">
+            <property name="text">
+             <string>Разр. по скорости (vres, м/с):</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="input_vres"/>
+          </item>
+          <item>
+           <widget class="QPushButton" name="clear_vres">
+            <property name="text">
+             <string>×</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="layout_input_dmax">
+          <item>
+           <widget class="QLabel" name="label_input_dmax">
+            <property name="text">
+             <string>Макс. дальность (dmax, м):</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="input_dmax"/>
+          </item>
+          <item>
+           <widget class="QPushButton" name="clear_dmax">
+            <property name="text">
+             <string>×</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="layout_input_vmax">
+          <item>
+           <widget class="QLabel" name="label_input_vmax">
+            <property name="text">
+             <string>Макс. скорость (vmax, м/с):</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="input_vmax"/>
+          </item>
+          <item>
+           <widget class="QPushButton" name="clear_vmax">
+            <property name="text">
+             <string>×</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="layout_input_f0">
+          <item>
+           <widget class="QLabel" name="label_input_f0">
+            <property name="text">
+             <string>Рабочая частота (f0, ГГц):</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="input_f0"/>
+          </item>
+          <item>
+           <widget class="QPushButton" name="clear_f0">
+            <property name="text">
+             <string>×</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <widget class="Line" name="line">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>5</height>
+           </size>
+          </property>
+          <property name="baseSize">
+           <size>
+            <width>0</width>
+            <height>5</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">border: 5px solid #808080;  /* Светло-серая линия*/</string>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Plain</enum>
+          </property>
+          <property name="lineWidth">
+           <number>5</number>
+          </property>
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_2">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>25</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>25</height>
+           </size>
+          </property>
+          <property name="text">
+           <string> Выходные параметры:</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="layout_input_lambda_">
+          <item>
+           <widget class="QLabel" name="label_input_lambda_">
+            <property name="text">
+             <string>Длина волны (λ, м):</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="input_lambda_"/>
+          </item>
+          <item>
+           <widget class="QPushButton" name="clear_lambda_">
+            <property name="text">
+             <string>×</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="layout_input_Tc">
+          <item>
+           <widget class="QLabel" name="label_input_Tc">
+            <property name="text">
+             <string>Длительность чирпа (Tc, мс):</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="input_Tc"/>
+          </item>
+          <item>
+           <widget class="QPushButton" name="clear_Tc">
+            <property name="text">
+             <string>×</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="layout_input_B">
+          <item>
+           <widget class="QLabel" name="label_input_B">
+            <property name="text">
+             <string>Девиация частоты (B, ГГц):</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="input_B"/>
+          </item>
+          <item>
+           <widget class="QPushButton" name="clear_B">
+            <property name="text">
+             <string>×</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="layout_input_S">
+          <item>
+           <widget class="QLabel" name="label_input_S">
+            <property name="text">
+             <string>Крутизна наклона (S, ГГц/мкс):</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="input_S"/>
+          </item>
+          <item>
+           <widget class="QPushButton" name="clear_S">
+            <property name="text">
+             <string>×</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="layout_input_N">
+          <item>
+           <widget class="QLabel" name="label_input_N">
+            <property name="text">
+             <string>Количество чирпов (N, шт):</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="input_N"/>
+          </item>
+          <item>
+           <widget class="QPushButton" name="clear_N">
+            <property name="text">
+             <string>×</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="layout_input_Tf">
+          <item>
+           <widget class="QLabel" name="label_input_Tf">
+            <property name="text">
+             <string>Длительность кадра (Tf, с):</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="input_Tf"/>
+          </item>
+          <item>
+           <widget class="QPushButton" name="clear_Tf">
+            <property name="text">
+             <string>×</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="layout_input_Fif">
+          <item>
+           <widget class="QLabel" name="label_input_Fif">
+            <property name="text">
+             <string>Частота дискретизации (Fif, МГц):</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="input_Fif"/>
+          </item>
+          <item>
+           <widget class="QPushButton" name="clear_Fif">
+            <property name="text">
+             <string>×</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="layout_input_mem">
+          <item>
+           <widget class="QLabel" name="label_input_mem">
+            <property name="text">
+             <string>Объём памяти (mem, Мб):</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="input_mem">
+            <property name="readOnly">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="clear_mem">
+            <property name="text">
+             <string>×</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="buttons_layout">
+          <item>
+           <widget class="QPushButton" name="btn_clear_all">
+            <property name="text">
+             <string>Очистить всё</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="btn_calculate">
+            <property name="text">
+             <string>Вычислить</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="btn_menu">
+            <property name="text">
+             <string>Меню</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="plot_container">
+       <layout class="QVBoxLayout" name="plot_layout"/>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
